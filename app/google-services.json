@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "601487880235",
+    "firebase_url": "https://chatapp-42870.firebaseio.com",
+    "project_id": "chatapp-42870",
+    "storage_bucket": "chatapp-42870.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601487880235:android:3f43b551cbe4658f",
+        "android_client_info": {
+          "package_name": "com.yyxtreme.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601487880235-9lbsi9jn4j6bitc3ej7nss8mimr23s2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOXKTFdp4DWhDyCHX5NgehkoLvMuWb7TU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
