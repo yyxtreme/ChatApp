@@ -31,7 +31,7 @@ import static android.R.string.no;
  * Created by Yatin Yadav on 23/08/2017.
  */
 
-public class Users extends AppCompatActivity{
+public class Users extends AppCompatActivity {
     ListView usersList;
     TextView noUsersText;
     ArrayList<String> al = new ArrayList<>();
@@ -52,7 +52,7 @@ public class Users extends AppCompatActivity{
 
         String url = "https://chatapp-42870.firebaseio.com/users.json";
 
-        StringRequest request = new StringRequest(Request.Method.GET,url,new Response.Listener<String>(){
+        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>(){
             @Override
             public void onResponse(String s) {
                 doOnSuccess(s);
@@ -67,9 +67,9 @@ public class Users extends AppCompatActivity{
         RequestQueue rQueue = Volley.newRequestQueue(Users.this);
         rQueue.add(request);
 
-        usersList.setOnClickListener(new AdapterView.OnItemClickListener(){
+        usersList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 UserDetails.chatWith = al.get(position);
                 startActivity(new Intent(Users.this, Chat.class));
             }
@@ -86,13 +86,14 @@ public class Users extends AppCompatActivity{
             while(i.hasNext()){
                 key = i.next().toString();
 
-                if(!key.equals(UserDetails.username)){
+                if(!key.equals(UserDetails.username)) {
                     al.add(key);
                 }
 
                 totalUsers++;
             }
-        }catch (JSONException e) {
+
+        } catch (JSONException e) {
             e.printStackTrace();
         }
 
@@ -108,5 +109,4 @@ public class Users extends AppCompatActivity{
 
         pd.dismiss();
     }
-
 }
